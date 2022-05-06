@@ -1,0 +1,26 @@
+{
+  "id": "24522a55-3798-4fcc-9417-d115d92f9a7d",
+  "name": "SOMS INTE",
+  "publisher": "Intwo publisher",
+  "version": "1.0.0.36",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "18.0.0.0",
+  "idRanges": [
+    {
+      "from": 50000,
+      "to": 50149
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://QNET-PROD.com/help/",
+  "showMyCode": false,
+  "runtime": "7.0"
+}

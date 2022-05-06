@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Tax_Area_Code">
+          <DataField>Tax_Area_Code</DataField>
+        </Field>
+        <Field Name="CompRegNo">
+          <DataField>CompRegNo</DataField>
+        </Field>
+        <Field Name="CustomerIDNo">
+          <DataField>CustomerIDNo</DataField>
+        </Field>
+        <Field Name="SOMS_Order_No_">
+          <DataField>SOMS_Order_No_</DataField>
+        </Field>
+        <Field Name="ReceiptNo">
+          <DataField>ReceiptNo</DataField>
+        </Field>
+        <Field Name="Sponsor">
+          <DataField>Sponsor</DataField>
+        </Field>
+        <Field Name="SponsorName">
+          <DataField>SponsorName</DataField>
+        </Field>
+        <Field Name="TaxInvoiceNo">
+          <DataField>TaxInvoiceNo</DataField>
+        </Field>
+        <Field Name="AEDRate">
+          <DataField>AEDRate</DataField>
+        </Field>
+        <Field Name="TransactionDate">
+          <DataField>TransactionDate</DataField>
+        </Field>
+        <Field Name="TransactionDescription">
+          <DataField>TransactionDescription</DataField>
+        </Field>
+        <Field Name="CustomerName">
+          <DataField>CustomerName</DataField>
+        </Field>
+        <Field Name="CustomerTRNNo">
+          <DataField>CustomerTRNNo</DataField>
+        </Field>
+        <Field Name="ShippingAddress">
+          <DataField>ShippingAddress</DataField>
+        </Field>
+        <Field Name="ShippingContactNo">
+          <DataField>ShippingContactNo</DataField>
+        </Field>
+        <Field Name="EMailAddress">
+          <DataField>EMailAddress</DataField>
+        </Field>
+        <Field Name="InvoicingAddress">
+          <DataField>InvoicingAddress</DataField>
+        </Field>
+        <Field Name="CompanyAddress1">
+          <DataField>CompanyAddress1</DataField>
+        </Field>
+        <Field Name="CompanyAddress2">
+          <DataField>CompanyAddress2</DataField>
+        </Field>
+        <Field Name="CompanyAddress3">
+          <DataField>CompanyAddress3</DataField>
+        </Field>
+        <Field Name="CompanyAddress4">
+          <DataField>CompanyAddress4</DataField>
+        </Field>
+        <Field Name="CompanyAddress5">
+          <DataField>CompanyAddress5</DataField>
+        </Field>
+        <Field Name="CompanyAddress6">
+          <DataField>CompanyAddress6</DataField>
+        </Field>
+        <Field Name="CompanyAddress7">
+          <DataField>CompanyAddress7</DataField>
+        </Field>
+        <Field Name="CompanyAddress8">
+          <DataField>CompanyAddress8</DataField>
+        </Field>
+        <Field Name="HeaderDate">
+          <DataField>HeaderDate</DataField>
+        </Field>
+        <Field Name="totalshipfeeamt">
+          <DataField>totalshipfeeamt</DataField>
+        </Field>
+        <Field Name="totalshipfeeamtFormat">
+          <DataField>totalshipfeeamtFormat</DataField>
+        </Field>
+        <Field Name="USDTotalShipFeeAmount">
+          <DataField>USDTotalShipFeeAmount</DataField>
+        </Field>
+        <Field Name="USDTotalShipFeeAmountFormat">
+          <DataField>USDTotalShipFeeAmountFormat</DataField>
+        </Field>
+        <Field Name="totalshipfeevatamt">
+          <DataField>totalshipfeevatamt</DataField>
+        </Field>
+        <Field Name="totalshipfeevatamtFormat">
+          <DataField>totalshipfeevatamtFormat</DataField>
+        </Field>
+        <Field Name="USDTotalShipFeeVATAmount">
+          <DataField>USDTotalShipFeeVATAmount</DataField>
+        </Field>
+        <Field Name="USDTotalShipFeeVATAmountFormat">
+          <DataField>USDTotalShipFeeVATAmountFormat</DataField>
+        </Field>
+        <Field Name="Currency_Code">
+          <DataField>Currency_Code</DataField>
+        </Field>
+        <Field Name="LineNo_Line">
+          <DataField>LineNo_Line</DataField>
+        </Field>
+        <Field Name="AmountExcludingVAT_Line">
+          <DataField>AmountExcludingVAT_Line</DataField>
+        </Field>
+        <Field Name="AmountExcludingVAT_LineFormat">
+          <DataField>AmountExcludingVAT_LineFormat</DataField>
+        </Field>
+        <Field Name="AmountIncludingVAT_Line">
+          <DataField>AmountIncludingVAT_Line</DataField>
+        </Field>
+        <Field Name="AmountIncludingVAT_LineFormat">
+          <DataField>AmountIncludingVAT_LineFormat</DataField>
+        </Field>
+        <Field Name="Description_Line">
+          <DataField>Description_Line</DataField>
+        </Field>
+        <Field Name="LineDiscountPercent_Line">
+          <DataField>LineDiscountPercent_Line</DataField>
+        </Field>
+        <Field Name="LineDiscountPercent_LineFormat">
+          <DataField>LineDiscountPercent_LineFormat</DataField>
+        </Field>
+        <Field Name="ItemNo_Line">
+          <DataField>ItemNo_Line</DataField>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+        </Field>
+        <Field Name="QuantityFormat">
+          <DataField>QuantityFormat</DataField>
+        </Field>
+        <Field Name="Unit_Price">
+          <DataField>Unit_Price</DataField>
+        </Field>
+        <Field Name="Unit_PriceFormat">
+          <DataField>Unit_PriceFormat</DataField>
+        </Field>
+        <Field Name="VATPer">
+          <DataField>VATPer</DataField>
+        </Field>
+        <Field Name="VATPerFormat">
+          <DataField>VATPerFormat</DataField>
+        </Field>
+        <Field Name="LineTotal">
+          <DataField>LineTotal</DataField>
+        </Field>
+        <Field Name="LineTotalFormat">
+          <DataField>LineTotalFormat</DataField>
+        </Field>
+        <Field Name="totalUSDVAT">
+          <DataField>totalUSDVAT</DataField>
+        </Field>
+        <Field Name="totalUSDVATFormat">
+          <DataField>totalUSDVATFormat</DataField>
+        </Field>
+        <Field Name="totalAEDexclVAT">
+          <DataField>totalAEDexclVAT</DataField>
+        </Field>
+        <Field Name="totalAEDexclVATFormat">
+          <DataField>totalAEDexclVATFormat</DataField>
+        </Field>
+        <Field Name="TotalVATAED">
+          <DataField>TotalVATAED</DataField>
+        </Field>
+        <Field Name="TotalVATAEDFormat">
+          <DataField>TotalVATAEDFormat</DataField>
+        </Field>
+        <Field Name="TotalAEDwithVAT">
+          <DataField>TotalAEDwithVAT</DataField>
+        </Field>
+        <Field Name="TotalAEDwithVATFormat">
+          <DataField>TotalAEDwithVATFormat</DataField>
+        </Field>
+        <Field Name="total">
+          <DataField>total</DataField>
+        </Field>
+        <Field Name="totalFormat">
+          <DataField>totalFormat</DataField>
+        </Field>
+        <Field Name="totalvat">
+          <DataField>totalvat</DataField>
+        </Field>
+        <Field Name="totalvatFormat">
+          <DataField>totalvatFormat</DataField>
+        </Field>
+        <Field Name="subtotal">
+          <DataField>subtotal</DataField>
+        </Field>
+        <Field Name="subtotalFormat">
+          <DataField>subtotalFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
