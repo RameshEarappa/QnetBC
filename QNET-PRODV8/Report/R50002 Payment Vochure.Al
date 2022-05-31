@@ -15,6 +15,7 @@ report 50002 "Payment Voucher"
             dataitem(PageLoop; "Integer")
             {
                 DataItemTableView = SORTING(Number) WHERE(Number = CONST(1));
+
                 column(VendAddr6; VendAddr[6])
                 {
                 }
@@ -314,6 +315,7 @@ report 50002 "Payment Voucher"
             end;
 
             trigger OnPreDataItem()
+            var
             begin
                 CompanyInfo.Get();
                 FormatAddr.Company(CompanyAddr, CompanyInfo);
